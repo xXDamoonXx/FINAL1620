@@ -1,9 +1,10 @@
 //On button click, remove text in input area, 
 //and display error if input isn't 'blur'
 let button = document.querySelector(".submit");
-var textValue = document.getElementsByName("input")[0];
+var textValue = document.getElementById("effect");
 function outputError() {
-    if (textValue.value != 'blur') {
+    console.log(textValue);
+    if (textValue.value !== 'blur') {
         alert('enter valid value');
     } else {
         console.log(textValue)
@@ -53,7 +54,7 @@ window.onload = function defaultLoading() {
     footer.style.visibility = "hidden"
 }
 
-//On mouse hover, make footer visible
+//On mouse hover, make footer reappear
 let mainImage = document.querySelector(".displayed-img");
 let thumb = document.querySelector("#thumb-bar");
 function onHoverShow(eve) {
