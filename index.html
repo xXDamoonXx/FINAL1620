@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="script/script.js" defer></script>
 </head>
+
 <body>
+    <header>
+        <h1>Welcome to our <em>gallery</em></h1>
+    </header>
     
+    <section>
+        <p>Hover on any thumbnail to see it bigger</p>
+        <div id="thumb-bar">
+            <img id="img1" class="thumb-image" src="">
+            <img id="img2" class="thumb-image" src="">
+            <img id="img3" class="thumb-image" src="">
+            <img id="img4" class="thumb-image" src="">
+            <img id="img5" class="thumb-image" src="">
+        </div>
+        <img class="displayed-img" src="images/pic1.jpg">
+        <footer id="form-elements">
+            <label>What effect do you want to apply?</label>
+            <input id="effect" type="text">
+            <button class="submit">Submit</button>
+        </footer>
+    </section>
 </body>
+
 </html>
