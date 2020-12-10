@@ -1,19 +1,23 @@
+//On button click, remove text in input area, 
+//and display error if input isn't 'blur'
 let button = document.querySelector(".submit");
+var textValue = document.getElementsByName("input")[0];
+function outputError() {
+    if (textValue.value != 'blur') {
+        alert('enter valid value');
+    } else {
+        console.log(textValue)
+    }
+}
+button.addEventListener("click", outputError)
+
 function removetext() {
     document.getElementById("effect").value = " ";
 }
 button.addEventListener("click", removetext)
 
 
-let thumbnailShow = document.querySelector(".thumb-image")
-let mainImage = document.querySelector(".displayed-img")
-function onHoverShow() {
-    footer.style.visibility = "visible"
-
-}
-thumbnailShow.addEventListener("mouseover", onHoverShow)
-
-
+//Add images on page load, and hide the footer
 let footer = document.querySelector("#form-elements")
 window.onload = function defaultLoading() {
     let image1 = document.querySelector('#img1');
@@ -49,11 +53,19 @@ window.onload = function defaultLoading() {
     footer.style.visibility = "hidden"
 }
 
+//On mouse hover, make footer visible
+let mainImage = document.querySelector(".displayed-img");
+let thumb = document.querySelector("#thumb-bar");
+function onHoverShow(eve) {
+    footer.style.visibility = "visible";
+}
+thumb.addEventListener("mouseover", onHoverShow);
+
+
+
 
 
 // let thumbnailHide = document.querySelector("#thumb-bar")
 // function onHoverHide() {
 //     footer.style.visibility = "hidden"
-
 // }
-// thumbnailHide.addEventListener("mouseout", onHoverHide)

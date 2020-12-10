@@ -39,7 +39,7 @@ img {
     flex-shrink: 2;
 }
 
-.thumb-image {
+.thumb-img {
     width: 20%;
     margin: 0em;
 }
@@ -112,3 +112,8 @@ hide-footer {
         display: inline;
     }
 }
+
+#img1 :hover + #img2 + #img3 + #img4 + #img5{
+    display: block;
+    color: red;
+  }
